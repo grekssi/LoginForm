@@ -1,0 +1,1 @@
+C:\Users\bedob\source\repos\loginPage\loginPage\loginPage.UWP\loginPage.UWP.csproj;x86

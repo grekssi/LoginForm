@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="Cyan"
+             x:Class="loginPage.Views.AuthenticationPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+            <StackLayout Padding="0, 30, 0, 40">
+                <Image Source="robot1.png"  VerticalOptions="CenterAndExpand" HeightRequest="170"></Image>
+            </StackLayout>
+
+            <StackLayout x:Name="UsernameLayout">
+                <Label Text="Username" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+                <Entry HorizontalOptions="Center" WidthRequest="200" Text="{Binding User.Username}"/>
+            </StackLayout>
+
+            <StackLayout x:Name="PasswordLayout">
+                <Label Text="Password" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+                <Entry HorizontalOptions="Center" WidthRequest="200" Text="{Binding User.Password}"/>
+            </StackLayout>
+
+            <StackLayout x:Name="EmailLayout">
+                <Label Text="Email" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+                <Entry HorizontalOptions="Center" WidthRequest="200" Text="{Binding User.Email}"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="Login" Command="{Binding LoginCommand}" HorizontalOptions="Center" WidthRequest="100" CornerRadius="80"/>
+                <Button  Text="Register" Command="{Binding RegistrationCommand}" HorizontalOptions="Center" WidthRequest="100" CornerRadius="80"/>
+            </StackLayout>
+
+            
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
