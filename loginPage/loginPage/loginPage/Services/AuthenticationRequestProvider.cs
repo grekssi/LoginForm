@@ -6,6 +6,7 @@ using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 using loginPage.Models;
+using loginPage.Views;
 using Xamarin.Forms;
 
 namespace loginPage.Services
@@ -16,13 +17,13 @@ namespace loginPage.Services
         {
             return "{" + $"\"name\":\"{user.Username}\",\"password\":\"{user.Password}\",\"email\":\"{user.Email}\"" + "}";
         }
-        public static Task<bool> RegisterNewUser(User user)
+        private static Task<bool> RegisterNewUserRequest(User user)
         {
             if (user == null) throw new ArgumentNullException(nameof(user));
 
             return Task.Run(() =>
             {
-                var httpWebRequest = (HttpWebRequest) WebRequest.Create("https://meower-api.grekssi.now.sh/register");
+                var httpWebRequest = (HttpWebRequest) WebRequest.Create(AuthenticationURLs.NewUserRegistrationURL);
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
 
@@ -49,13 +50,13 @@ namespace loginPage.Services
             });
         }
 
-        public static Task<bool> LoginUser(User user)
+        private static Task<bool> LoginUserRequest(User user)
         {
             if (user == null) throw new ArgumentNullException(nameof(user));
 
             return Task.Run(() =>
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("https://meower-api.grekssi.now.sh/login");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(AuthenticationURLs.UserLoginURL);
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
 
@@ -80,6 +81,33 @@ namespace loginPage.Services
                     return false;
                 }
             });
+        }
+
+        public static async void SendLoginRequest(User user)
+        {
+            if (user == null) throw new ArgumentNullException(nameof(user));
+
+            var task = await LoginUserRequest(user);
+            if (!task)
+            {
+                await Application.Current.MainPage.DisplayAlert("Invalid request", "Please enter valid Username and Password", "OK", "Cancel");
+                Application.Current.MainPage = new AuthenticationPage();
+                return;
+            }
+            Application.Current.MainPage = new MainPage();
+        }
+
+        public static async void SendRegistrationRequest(User user)
+        {
+            if (user == null) throw new ArgumentNullException(nameof(user));
+
+            var task = await RegisterNewUserRequest(user);
+            if (!task)
+            {
+                await Application.Current.MainPage.DisplayAlert("Invalid request", "Please enter valid Username, Password and Email", "OK", "Cancel");
+                Application.Current.MainPage = new AuthenticationPage();
+            }
+            Application.Current.MainPage = new AuthenticationPage();
         }
     }
 }

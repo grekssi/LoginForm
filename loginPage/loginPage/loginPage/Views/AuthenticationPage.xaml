@@ -4,36 +4,55 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             BackgroundColor="Cyan"
+             BackgroundImageSource="WhiteGrayImage.png"
              x:Class="loginPage.Views.AuthenticationPage">
     <ContentPage.Content>
         <StackLayout Spacing="20">
-            <StackLayout Padding="0, 30, 0, 40">
-                <Image Source="robot1.png"  VerticalOptions="CenterAndExpand" HeightRequest="170"></Image>
+            <StackLayout Padding="0, 20, 0, 0">
+                <Image x:Name="RobotImage" Source="robot1.png"  VerticalOptions="CenterAndExpand" HeightRequest="70"></Image>
             </StackLayout>
 
-            <StackLayout x:Name="UsernameLayout">
-                <Label Text="Username" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
-                <Entry HorizontalOptions="Center" WidthRequest="200" Text="{Binding User.Username}"/>
-            </StackLayout>
+            <Frame x:Name="MainFrame" WidthRequest="320" CornerRadius="10" BorderColor="Black" HorizontalOptions="Center" VerticalOptions="Center">
+                <StackLayout HorizontalOptions="CenterAndExpand" Spacing="20">
+                    <StackLayout>
+                        <Label Text="SIGN IN" TextColor="DodgerBlue" HorizontalOptions="CenterAndExpand"></Label>
+                    </StackLayout>
 
-            <StackLayout x:Name="PasswordLayout">
-                <Label Text="Password" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
-                <Entry HorizontalOptions="Center" WidthRequest="200" Text="{Binding User.Password}"/>
-            </StackLayout>
+                    <StackLayout x:Name="UsernameLayout" Spacing="-5">
+                        <Label Text="Username" HorizontalOptions="StartAndExpand" />
+                        <Entry HorizontalOptions="CenterAndExpand" WidthRequest="380" Text="{Binding User.Username}"/>
+                    </StackLayout>
 
-            <StackLayout x:Name="EmailLayout">
-                <Label Text="Email" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
-                <Entry HorizontalOptions="Center" WidthRequest="200" Text="{Binding User.Email}"/>
-            </StackLayout>
+                    <StackLayout x:Name="PasswordLayout" Spacing="-5">
+                        <Label Text="Password" HorizontalOptions="StartAndExpand"/>
+                        <Entry HorizontalOptions="Center" WidthRequest="380" Text="{Binding User.Password}"/>
+                    </StackLayout>
 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                <Button Text="Login" Command="{Binding LoginCommand}" HorizontalOptions="Center" WidthRequest="100" CornerRadius="80"/>
-                <Button  Text="Register" Command="{Binding RegistrationCommand}" HorizontalOptions="Center" WidthRequest="100" CornerRadius="80"/>
-            </StackLayout>
+                    <StackLayout x:Name="EmailLayout" IsVisible="false" Spacing="-5">
+                        <Label Text="Email" HorizontalOptions="StartAndExpand"/>
+                        <Entry HorizontalOptions="Center" WidthRequest="380" Text="{Binding User.Email}"/>
+                    </StackLayout>
 
-            
+                    <StackLayout x:Name="ButtonsLayout" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="LoginButton" BackgroundColor="DodgerBlue" TextColor="White" IsVisible="True" Text="Login" Command="{Binding User.LogIn}" Clicked="AuthenticationButton_OnClicked" HorizontalOptions="Center" WidthRequest="300" HeightRequest="35" CornerRadius="80"/>
+                        <Button x:Name="RegisterButton" BackgroundColor="DodgerBlue" TextColor="White"  IsVisible="False" Text="Register" Command="{Binding User.Register}" Clicked="AuthenticationButton_OnClicked" HorizontalOptions="Center" WidthRequest="300" HeightRequest="35" CornerRadius="80"/>
+                    </StackLayout>
 
+                    <Label x:Name="RegisterLabel" HorizontalOptions="StartAndExpand" FontSize="Body">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="New User? " TextColor="DimGray"></Span>
+                                <Span Text="Sign Up" TextColor="DodgerBlue"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped">
+                            </TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                </StackLayout>
+            </Frame>
         </StackLayout>
 
     </ContentPage.Content>

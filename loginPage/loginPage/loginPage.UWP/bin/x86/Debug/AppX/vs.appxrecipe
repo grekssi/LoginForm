@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\bedob\source\repos\loginPage\loginPage\loginPage.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-25T09:37:53.920</Modified>
+      <Modified>2020-03-26T11:24:00.556</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\bedob\source\repos\loginPage\loginPage\loginPage.UWP\bin\x86\Debug\loginPage.UWP.exe">
       <PackagePath>entrypoint\loginPage.UWP.exe</PackagePath>
-      <Modified>2020-03-25T09:37:51.361</Modified>
+      <Modified>2020-03-26T11:23:57.525</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\bedob\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.9\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -694,6 +694,22 @@
       <PackagePath>netstandard.dll</PackagePath>
       <Modified>2018-10-04T10:37:40.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\bedob\.nuget\packages\skiasharp\1.68.0\runtimes\win10-x86\nativeassets\uap10.0\libEGL.dll">
+      <PackagePath>libEGL.dll</PackagePath>
+      <Modified>2018-12-02T20:21:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\bedob\.nuget\packages\skiasharp\1.68.0\runtimes\win10-x86\nativeassets\uap10.0\libGLESv2.dll">
+      <PackagePath>libGLESv2.dll</PackagePath>
+      <Modified>2018-12-02T20:21:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\bedob\.nuget\packages\skiasharp\1.68.0\runtimes\win10-x86\nativeassets\uap10.0\libSkiaSharp.dll">
+      <PackagePath>libSkiaSharp.dll</PackagePath>
+      <Modified>2018-12-02T20:21:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\bedob\.nuget\packages\skiasharp\1.68.0\lib\uap10.0\SkiaSharp.dll">
+      <PackagePath>SkiaSharp.dll</PackagePath>
+      <Modified>2018-12-02T20:21:44.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Microsoft\Xamarin\NuGet\win2d.uwp\1.20.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2016-11-30T00:58:38.000</Modified>
@@ -701,6 +717,30 @@
     <AppxPackagedFile Include="C:\Microsoft\Xamarin\NuGet\xamarin.essentials\1.3.1\lib\uap10.0.16299\Xamarin.Essentials.dll">
       <PackagePath>Xamarin.Essentials.dll</PackagePath>
       <Modified>2019-09-18T21:33:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\bedob\.nuget\packages\xamarin.ffimageloading\2.4.11.982\lib\uap\FFImageLoading.Platform.dll">
+      <PackagePath>FFImageLoading.Platform.dll</PackagePath>
+      <Modified>2019-05-19T17:46:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\bedob\.nuget\packages\xamarin.ffimageloading\2.4.11.982\lib\uap\FFImageLoading.dll">
+      <PackagePath>FFImageLoading.dll</PackagePath>
+      <Modified>2019-05-19T17:46:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\bedob\.nuget\packages\xamarin.ffimageloading.forms\2.4.11.982\lib\uap\FFImageLoading.Forms.Platform.dll">
+      <PackagePath>FFImageLoading.Forms.Platform.dll</PackagePath>
+      <Modified>2019-05-19T17:46:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\bedob\.nuget\packages\xamarin.ffimageloading.forms\2.4.11.982\lib\uap\FFImageLoading.Forms.dll">
+      <PackagePath>FFImageLoading.Forms.dll</PackagePath>
+      <Modified>2019-05-19T17:46:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\bedob\.nuget\packages\xamarin.ffimageloading.svg\2.4.11.982\lib\uap\FFImageLoading.Svg.Platform.dll">
+      <PackagePath>FFImageLoading.Svg.Platform.dll</PackagePath>
+      <Modified>2019-05-19T17:47:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\bedob\.nuget\packages\xamarin.ffimageloading.svg.forms\2.4.11.982\lib\uap\FFImageLoading.Svg.Forms.dll">
+      <PackagePath>FFImageLoading.Svg.Forms.dll</PackagePath>
+      <Modified>2019-05-19T17:47:24.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Microsoft\Xamarin\NuGet\xamarin.forms\4.3.0.908675\lib\uap10.0\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
@@ -720,7 +760,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\bedob\source\repos\loginPage\loginPage\loginPage\bin\Debug\netstandard2.0\loginPage.dll">
       <PackagePath>loginPage.dll</PackagePath>
-      <Modified>2020-03-25T09:41:26.726</Modified>
+      <Modified>2020-03-26T11:25:02.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Microsoft\Xamarin\NuGet\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -919,11 +959,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\bedob\source\repos\loginPage\loginPage\loginPage.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-03-24T14:08:22.611</Modified>
+      <Modified>2020-03-26T11:23:59.540</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\bedob\source\repos\loginPage\loginPage\loginPage.UWP\bin\x86\Debug\Core\loginPage.UWP.exe">
       <PackagePath>loginPage.UWP.exe</PackagePath>
-      <Modified>2020-03-25T09:37:53.881</Modified>
+      <Modified>2020-03-26T11:24:00.532</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
